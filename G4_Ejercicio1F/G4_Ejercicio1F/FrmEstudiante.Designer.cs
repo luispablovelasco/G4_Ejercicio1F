@@ -34,6 +34,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -51,6 +59,7 @@
             this.DgvEstudiantes.Name = "DgvEstudiantes";
             this.DgvEstudiantes.Size = new System.Drawing.Size(601, 125);
             this.DgvEstudiantes.TabIndex = 9;
+            this.DgvEstudiantes.DoubleClick += new System.EventHandler(this.DgvEstudiantes_DoubleClick);
             // 
             // FrmEstudiante
             // 
