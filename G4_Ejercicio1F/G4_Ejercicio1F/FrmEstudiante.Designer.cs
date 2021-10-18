@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
+            this.DgvEstudiantes = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -42,21 +44,33 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "REGISTRO ESTUDIANTES";
             // 
+            // DgvEstudiantes
+            // 
+            this.DgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvEstudiantes.Location = new System.Drawing.Point(12, 213);
+            this.DgvEstudiantes.Name = "DgvEstudiantes";
+            this.DgvEstudiantes.Size = new System.Drawing.Size(601, 125);
+            this.DgvEstudiantes.TabIndex = 9;
+            // 
             // FrmEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(625, 350);
+            this.Controls.Add(this.DgvEstudiantes);
             this.Controls.Add(this.label4);
             this.Name = "FrmEstudiante";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmEstudiante_FormClosed);
+            this.Load += new System.EventHandler(this.FrmEstudiante_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnlimpiar, 0);
             this.Controls.SetChildIndex(this.btnmodificar, 0);
             this.Controls.SetChildIndex(this.btnguardar, 0);
             this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.DgvEstudiantes, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEstudiantes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -65,5 +79,6 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView DgvEstudiantes;
     }
 }

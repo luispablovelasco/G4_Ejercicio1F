@@ -31,21 +31,35 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtmateria = new System.Windows.Forms.TextBox();
+            this.Dgvdocentes = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgvdocentes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtmateria);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.SetChildIndex(this.label5, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtmateria, 0);
             this.groupBox1.Controls.SetChildIndex(this.label1, 0);
             this.groupBox1.Controls.SetChildIndex(this.label2, 0);
             this.groupBox1.Controls.SetChildIndex(this.label3, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtnombre, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtusuario, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtcodigo, 0);
-            this.groupBox1.Controls.SetChildIndex(this.label5, 0);
-            this.groupBox1.Controls.SetChildIndex(this.txtmateria, 0);
+            // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            // 
+            // btnmodificar
+            // 
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // label4
             // 
@@ -73,21 +87,34 @@
             this.txtmateria.Size = new System.Drawing.Size(318, 20);
             this.txtmateria.TabIndex = 8;
             // 
+            // Dgvdocentes
+            // 
+            this.Dgvdocentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgvdocentes.Location = new System.Drawing.Point(12, 210);
+            this.Dgvdocentes.Name = "Dgvdocentes";
+            this.Dgvdocentes.Size = new System.Drawing.Size(601, 128);
+            this.Dgvdocentes.TabIndex = 10;
+            this.Dgvdocentes.DoubleClick += new System.EventHandler(this.Dgvdocentes_DoubleClick);
+            // 
             // FrmDocentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(625, 350);
+            this.Controls.Add(this.Dgvdocentes);
             this.Controls.Add(this.label4);
             this.Name = "FrmDocentes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmDocentes_FormClosed);
+            this.Load += new System.EventHandler(this.FrmDocentes_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnlimpiar, 0);
             this.Controls.SetChildIndex(this.btnmodificar, 0);
             this.Controls.SetChildIndex(this.btnguardar, 0);
             this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.Dgvdocentes, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgvdocentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,7 +123,8 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        protected System.Windows.Forms.TextBox txtmateria;
+        public System.Windows.Forms.TextBox txtmateria;
         protected System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView Dgvdocentes;
     }
 }

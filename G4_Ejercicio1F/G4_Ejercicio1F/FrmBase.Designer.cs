@@ -38,9 +38,7 @@
             this.btnlimpiar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
-            this.Dgvdatos = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgvdatos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -141,33 +139,23 @@
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
             // 
-            // Dgvdatos
-            // 
-            this.Dgvdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgvdatos.Location = new System.Drawing.Point(12, 210);
-            this.Dgvdatos.Name = "Dgvdatos";
-            this.Dgvdatos.Size = new System.Drawing.Size(601, 128);
-            this.Dgvdatos.TabIndex = 8;
-            // 
             // FrmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(625, 350);
-            this.Controls.Add(this.Dgvdatos);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmBase";
+            this.Load += new System.EventHandler(this.FrmBase_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnlimpiar, 0);
             this.Controls.SetChildIndex(this.btnmodificar, 0);
             this.Controls.SetChildIndex(this.btnguardar, 0);
-            this.Controls.SetChildIndex(this.Dgvdatos, 0);
+            this.Controls.SetChildIndex(this.btnSalir, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgvdatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,6 +172,5 @@
         protected System.Windows.Forms.Button btnlimpiar;
         protected System.Windows.Forms.Button btnmodificar;
         protected System.Windows.Forms.Button btnguardar;
-        protected System.Windows.Forms.DataGridView Dgvdatos;
     }
 }
